@@ -94,21 +94,29 @@ export const headerMenuList = [
   {
     text: 'Home',
     link: '#',
+    icon: 'house-chimney',
   },
   {
     text: 'Lifestyle',
     link: '#',
+    icon: 'suitcase',
+    other: true,
   },
   {
     text: 'Stories',
     link: '#',
+    icon: 'book-open-reader',
+    other: true,
   },
   {
     text: 'Pages',
     link: '#',
+    icon: 'book',
+    other: true,
   },
   {
     text: 'About Us',
     link: '#',
+    icon: 'user',
   },
 ];
