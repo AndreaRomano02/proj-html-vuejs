@@ -7,8 +7,10 @@ export default {
 </script>
 
 <template>
-  <HeaderTop />
-  <HeaderBottom />
+  <header>
+    <HeaderTop />
+    <HeaderBottom />
+  </header>
 </template>
 
-<style></style>
+<style scoped></style>
