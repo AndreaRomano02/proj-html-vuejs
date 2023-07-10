@@ -89,3 +89,26 @@ export const anime = [
   },
 ];
 export const icons = ['facebook-f', 'twitter', 'instagram', 'youtube'];
+
+export const headerMenuList = [
+  {
+    text: 'Home',
+    link: '#',
+  },
+  {
+    text: 'Lifestyle',
+    link: '#',
+  },
+  {
+    text: 'Stories',
+    link: '#',
+  },
+  {
+    text: 'Pages',
+    link: '#',
+  },
+  {
+    text: 'About Us',
+    link: '#',
+  },
+];
