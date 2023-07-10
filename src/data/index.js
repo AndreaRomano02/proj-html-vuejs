@@ -1,0 +1,78 @@
+export const anime = [
+  {
+    title: 'Fashion Trend Now A Days',
+    src: 'anime-fashion.webp',
+    date: 'December 26, 2022',
+    genres: ['Fashion', 'Lifestyle'],
+  },
+  {
+    title: 'Place For A Road Trip',
+    src: 'best-places.webp',
+    date: 'December 26, 2022',
+    genres: ['Lifestyle', 'Stories', 'Travel'],
+  },
+  {
+    title: 'The Best Healthy Foods In 2022',
+    src: 'healthy-foods.webp',
+    srcSmall: 'healthy-foods-150x150.webp',
+    date: 'December 26, 2022',
+    genres: ['Food'],
+  },
+  {
+    title: 'Live ideas You Might Be Anime',
+    src: 'ideas-anime.webp',
+    date: 'December 26, 2022',
+    genres: ['Culture', 'Stories'],
+  },
+  {
+    title: 'The Best Time To Have A Meal',
+    src: '',
+    srcSmall: 'meal-time-150x150.webp',
+    date: 'December 26, 2022',
+    genres: ['Food'],
+  },
+  {
+    title: 'Music The Love Of My Life',
+    src: 'music-love.webp',
+    date: 'December 26, 2022',
+    genres: ['Lifestyle', 'Lifestyle'],
+  },
+  {
+    title: "Beginner Photographer's Mistakes",
+    src: 'photographers-mistakes.webp',
+    date: 'December 26, 2022',
+    genres: ['Fashion'],
+  },
+  {
+    title: 'Hygenic Receipe To Prepare Rice',
+    src: 'rice-ball.webp',
+    srcSmall: 'rice-ball-150x150.webp',
+    date: 'December 26, 2022',
+    genres: ['Food'],
+  },
+  {
+    title: 'The Best Success Stories',
+    src: 'success-story.webp',
+    date: 'December 26, 2022',
+    genres: ['Culture', 'Stories'],
+  },
+  {
+    title: 'Traveling Alone Is Awesome',
+    src: 'travel-alone.webp',
+    date: 'December 26, 2022',
+    genres: ['Stories', 'Travel'],
+  },
+  {
+    title: 'Reasons TO Visit France',
+    src: 'visit-france.webp',
+    date: 'December 26, 2022',
+    genres: ['Lifestyle', 'Travel'],
+  },
+  {
+    title: 'The Best Winter Outfits',
+    src: 'winter.webp',
+    srcSmall: 'winter-150x150.webp',
+    date: 'December 26, 2022',
+    genres: ['Fashion'],
+  },
+];
