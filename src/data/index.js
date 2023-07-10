@@ -30,7 +30,7 @@ export const anime = [
   },
   {
     title: 'The Best Time To Have A Meal',
-    src: '',
+    src: 'meal-time.webp',
     srcSmall: 'meal-time-150x150.webp',
     date: 'December 26, 2022',
     genres: ['Food'],
