@@ -1,2 +1,9 @@
+@use './vars' as *;
+
 //# IMPORT BOOTSTRAP
 @import "bootstrap/scss/bootstrap";
+
+
+body{
+  font-family: $font;
+}
