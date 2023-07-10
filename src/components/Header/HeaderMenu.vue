@@ -29,6 +29,10 @@ export default {
 <style lang="scss" scoped>
 @use '@/assets/scss/vars' as *;
 
+nav {
+  margin-bottom: 1rem;
+}
+
 ul {
   display: flex;
   gap: 20px;
