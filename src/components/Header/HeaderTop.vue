@@ -32,7 +32,8 @@ export default {
         <h5>news updates</h5>
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div v-for="element in smallPictureElement" class="carousel-item active">
+            <div v-for="(element, i) in smallPictureElement" :key="element.title" class="carousel-item"
+              :class="{ 'active': i == 0 }">
               <img :src="element.srcSmall" :alt="element.title">
               <span>{{ element.time }}</span><span>{{ element.title }}</span>
             </div>
