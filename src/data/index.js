@@ -4,12 +4,14 @@ export const anime = [
     src: 'anime-fashion.webp',
     date: 'December 26, 2022',
     genres: ['Fashion', 'Lifestyle'],
+    time: '5:32',
   },
   {
     title: 'Place For A Road Trip',
     src: 'best-places.webp',
     date: 'December 26, 2022',
     genres: ['Lifestyle', 'Stories', 'Travel'],
+    time: '5:51',
   },
   {
     title: 'The Best Healthy Foods In 2022',
@@ -17,12 +19,14 @@ export const anime = [
     srcSmall: 'healthy-foods-150x150.webp',
     date: 'December 26, 2022',
     genres: ['Food'],
+    time: '5:42',
   },
   {
     title: 'Live ideas You Might Be Anime',
     src: 'ideas-anime.webp',
     date: 'December 26, 2022',
     genres: ['Culture', 'Stories'],
+    time: '5:00',
   },
   {
     title: 'The Best Time To Have A Meal',
@@ -30,18 +34,21 @@ export const anime = [
     srcSmall: 'meal-time-150x150.webp',
     date: 'December 26, 2022',
     genres: ['Food'],
+    time: '5:11',
   },
   {
     title: 'Music The Love Of My Life',
     src: 'music-love.webp',
     date: 'December 26, 2022',
     genres: ['Lifestyle', 'Lifestyle'],
+    time: '5:50',
   },
   {
     title: "Beginner Photographer's Mistakes",
     src: 'photographers-mistakes.webp',
     date: 'December 26, 2022',
     genres: ['Fashion'],
+    time: '5:15',
   },
   {
     title: 'Hygenic Receipe To Prepare Rice',
@@ -49,24 +56,28 @@ export const anime = [
     srcSmall: 'rice-ball-150x150.webp',
     date: 'December 26, 2022',
     genres: ['Food'],
+    time: '5:22',
   },
   {
     title: 'The Best Success Stories',
     src: 'success-story.webp',
     date: 'December 26, 2022',
     genres: ['Culture', 'Stories'],
+    time: '5:42',
   },
   {
     title: 'Traveling Alone Is Awesome',
     src: 'travel-alone.webp',
     date: 'December 26, 2022',
     genres: ['Stories', 'Travel'],
+    time: '5:38',
   },
   {
     title: 'Reasons TO Visit France',
     src: 'visit-france.webp',
     date: 'December 26, 2022',
     genres: ['Lifestyle', 'Travel'],
+    time: '5:37',
   },
   {
     title: 'The Best Winter Outfits',
@@ -74,5 +85,6 @@ export const anime = [
     srcSmall: 'winter-150x150.webp',
     date: 'December 26, 2022',
     genres: ['Fashion'],
+    time: '5:34',
   },
 ];
