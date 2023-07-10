@@ -25,5 +25,9 @@ a {
   line-height: 30px;
   background-color: white;
   color: $primary;
+
+  &:hover {
+    background-color: $secondary;
+  }
 }
 </style>
