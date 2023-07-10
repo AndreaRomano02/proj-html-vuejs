@@ -28,19 +28,23 @@ export default {
     <div class="container">
       <div class="news">
         <h5>news updates</h5>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div v-for="element in smallPictureElement" class="carousel-item active">
+              <img :src="element.srcSmall" :alt="element.title">
+              <span>{{ element.time }}</span><span>{{ element.title }}</span>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button type="button" data-bs-target="#carousel" data-bs-slide="prev" class="text-white">
+              <div aria-hidden="true"><font-awesome-icon :icon="['fas', 'chevron-left']" /></div>
+            </button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide="next" class="text-white">
+              <div aria-hidden="true"><font-awesome-icon :icon="['fas', 'chevron-right']" /></div>
+            </button>
+          </div>
+        </div>
 
-        <!-- ------------------------------------------------------------ -->
-        <!-- Ho Hardcodato intanto solo il primo risolutato poi farò il carosello automatico -->
-        <!-- ------------------------------------------------------------ -->
-        <div class="carousel">
-          <img :src="smallPictureElement[0].srcSmall" :alt="smallPictureElement[0].title">
-          <span>{{ smallPictureElement[0].time }}</span>
-          <span>{{ smallPictureElement[0].title }}</span>
-        </div>
-        <div class="carousel-comands">
-          <span><font-awesome-icon :icon="['fas', 'chevron-left']" /></span>
-          <span><font-awesome-icon :icon="['fas', 'chevron-right']" /></span>
-        </div>
       </div>
       <div class="icon"></div>
     </div>
@@ -79,6 +83,7 @@ export default {
 
 
   .carousel {
+    display: flex;
     flex-grow: 1;
 
     img {
@@ -93,13 +98,16 @@ export default {
     }
   }
 
-  .carousel-comands {
-    span {
-      cursor: pointer;
-      display: inline-block;
+  .carousel-controls {
+    display: flex;
+
+    button {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      text-align: center;
       width: 40px;
       height: 40px;
-      text-align: center;
       line-height: 40px;
       border-radius: 50%;
 
