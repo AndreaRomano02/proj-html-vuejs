@@ -88,3 +88,4 @@ export const anime = [
     time: '5:34',
   },
 ];
+export const icons = ['facebook-f', 'twitter', 'instagram', 'youtube'];

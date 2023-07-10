@@ -3,6 +3,12 @@
 //# IMPORT BOOTSTRAP
 @import "bootstrap/scss/bootstrap";
 
+a{
+  color: currentColor;
+  margin: 0;
+  padding: 0;
+  text-decoration: none ;
+}
 
 body{
   font-family: $font;

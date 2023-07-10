@@ -1,12 +1,14 @@
 <script>
 import SocialIcon from '../General/SocialIcon.vue';
 import { anime } from '@/data'
+import { icons } from '@/data'
 
 export default {
   components: { SocialIcon },
   data() {
     return {
-      anime
+      anime,
+      icons
     }
   },
   computed: {
@@ -46,7 +48,9 @@ export default {
         </div>
 
       </div>
-      <div class="icon"></div>
+      <div class="icons">
+        <SocialIcon :icons="icons" />
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +65,7 @@ export default {
 
   &>div {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -68,7 +73,7 @@ export default {
   display: flex;
   align-items: center;
   height: 100%;
-  flex-basis: 75%;
+  flex-basis: 85%;
 
   h5 {
     font-size: 1rem;
@@ -117,5 +122,10 @@ export default {
     }
 
   }
+}
+
+.icons {
+  flex-grow: 1;
+  text-align: end;
 }
 </style>
