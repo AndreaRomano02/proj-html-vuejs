@@ -1,9 +1,10 @@
 <script>
 import CarouselSection from './Section/CarouselSection.vue'
+import HeaderSection from './Section/HeaderSection.vue'
 import AnimeCard from '../General/AnimeCard.vue'
 import { anime } from '@/data'
 export default {
-  components: { CarouselSection, AnimeCard },
+  components: { CarouselSection, AnimeCard, HeaderSection },
   data() {
     return {
       anime
@@ -20,6 +21,7 @@ export default {
       <CarouselSection :anime="anime" />
     </section>
 
+    <!-- Anime Section -->
     <section id="anime-card">
       <div class="container">
         <div class="row">
@@ -38,21 +40,47 @@ export default {
       </div>
     </section>
 
+    <!-- Lifestyle & Stories -->
+    <section id="lifestyle-section">
+      <div class="container">
+        <!-- Header of Section -->
+        <HeaderSection :items="['All', 'lifestyle', 'stories']">
+          Lifestyle & Stories
+        </HeaderSection>
+
+        <div class="row mt-5">
+          <div class="col-7">
+            <AnimeCard :item="anime[8]" :left="true" :isOver="true" :singleGenre="true" :icon="true" />
+          </div>
+          <div class="col-5">
+            <div v-for="item in anime.slice(0, 3)" :key="item.title">
+              <AnimeCard class="anime-card" :item="item" :left="true" :icon="true" :singleGenre="true"
+                :asideText="true" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
-<style scoped>
-#anime-card {
-  display: flex;
+<style lang="scss" scoped>
+@use '@/assets/scss/vars' as *;
+
+section {
+  margin: 3rem 0;
 }
 
-.small {
-  height: 300px;
-  width: 300px;
-}
+#lifestyle-section {
+  .col-5>div:first-child div {
+    border: none;
+    padding-top: 0;
+  }
 
-.large {
-  height: 500px;
-  width: 500px;
+  .anime-card {
+    padding: 1rem 0;
+    border-top: 1px solid black;
+
+  }
 }
 </style>
