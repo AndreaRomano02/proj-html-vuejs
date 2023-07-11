@@ -1,10 +1,12 @@
 <script>
 import SocialIcon from '../General/SocialIcon.vue';
+import ArrowLeft from '../General/ArrowLeft.vue';
+import ArrowRight from '../General/ArrowRight.vue';
 import { anime } from '@/data'
 import { icons } from '@/data'
 
 export default {
-  components: { SocialIcon },
+  components: { SocialIcon, ArrowLeft, ArrowRight },
   data() {
     return {
       anime,
@@ -39,12 +41,8 @@ export default {
             </div>
           </div>
           <div class="carousel-controls">
-            <button type="button" data-bs-target="#carousel" data-bs-slide="prev" class="text-white">
-              <div aria-hidden="true"><font-awesome-icon :icon="['fas', 'chevron-left']" /></div>
-            </button>
-            <button type="button" data-bs-target="#carousel" data-bs-slide="next" class="text-white">
-              <div aria-hidden="true"><font-awesome-icon :icon="['fas', 'chevron-right']" /></div>
-            </button>
+            <ArrowLeft data-bs-target="#carousel" data-bs-slide="prev" class="text-white" aria-hidden="true" />
+            <ArrowRight data-bs-target="#carousel" data-bs-slide="next" class="text-white" aria-hidden="true" />
           </div>
         </div>
 
@@ -107,20 +105,20 @@ export default {
   .carousel-controls {
     display: flex;
 
-    button {
-      border: none;
-      background-color: transparent;
-      padding: 0;
-      text-align: center;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 50%;
+    // button {
+    //   border: none;
+    //   background-color: transparent;
+    //   padding: 0;
+    //   text-align: center;
+    //   width: 40px;
+    //   height: 40px;
+    //   line-height: 40px;
+    //   border-radius: 50%;
 
-      &:hover {
-        background-color: $secondary;
-      }
-    }
+    //   &:hover {
+    //     background-color: $secondary;
+    //   }
+    // }
 
   }
 }
