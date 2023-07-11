@@ -24,6 +24,7 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons';
 import { faSuitcase } from '@fortawesome/free-solid-svg-icons';
 import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faChevronLeft,
@@ -39,6 +40,7 @@ library.add(
   faBook,
   faBookOpenReader,
   faSuitcase,
-  faHouseChimney
+  faHouseChimney,
+  faCalendarDays
 );
 createApp(App).component('FontAwesomeIcon', FontAwesomeIcon).mount('#app');
