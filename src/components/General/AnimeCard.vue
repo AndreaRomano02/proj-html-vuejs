@@ -54,10 +54,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// General CSS of fiure
 figure {
   position: relative;
   font-weight: bold;
 
+  // CSS of aside text chose
   &.aside-figure {
     display: flex;
     align-items: center;
@@ -87,18 +89,22 @@ figure {
   }
 }
 
+// CSS for center choise
 .center {
   left: 0;
   width: 100%;
   text-align: center;
 }
 
+
+// General CSS of desctiption
 figcaption {
   position: absolute;
   text-align: center;
   left: 20px;
   margin-top: 10px;
 
+  // CSS of description over image
   &.over-description {
     bottom: 20px;
     z-index: 1;
@@ -106,6 +112,8 @@ figcaption {
     font-weight: bold;
   }
 
+
+  // CSS of description for Aside text
   &.aside-text {
     position: static;
     width: 100%;
@@ -114,7 +122,7 @@ figcaption {
 }
 
 
-
+// General
 p {
   margin: 0;
 }
