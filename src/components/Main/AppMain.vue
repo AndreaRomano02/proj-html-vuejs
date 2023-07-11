@@ -24,15 +24,15 @@ export default {
       <div class="container">
         <div class="row">
           <div class="col-3">
-            <AnimeCard :item="anime[0]" :is-over="true" :left="false" />
-            <AnimeCard :item="anime[1]" :is-over="true" :left="false" />
+            <AnimeCard :item="anime[0]" :is-over="true" :left="false" :icon="true" />
+            <AnimeCard :item="anime[1]" :is-over="true" :left="false" :icon="true" />
           </div>
           <div class="col-6">
-            <AnimeCard :item="anime[5]" :is-over="true" :left="false" />
+            <AnimeCard :item="anime[5]" :is-over="true" :left="false" :icon="true" />
           </div>
           <div class="col-3">
-            <AnimeCard :item="anime[3]" :is-over="true" :left="false" />
-            <AnimeCard :item="anime[4]" :is-over="true" :left="false" />
+            <AnimeCard :item="anime[3]" :is-over="true" :left="false" :icon="true" />
+            <AnimeCard :item="anime[4]" :is-over="true" :left="false" :icon="true" />
           </div>
         </div>
       </div>

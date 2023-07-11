@@ -1,5 +1,9 @@
 <script>
+import AnimeCard from '@/components/general/AnimeCard.vue'
+import ArrowLeft from '@/components/General/ArrowLeft.vue';
+import ArrowRight from '@/components/General/ArrowRight.vue';
 export default {
+  components: { AnimeCard, ArrowLeft, ArrowRight },
   props: {
     anime: Array,
   },
@@ -9,7 +13,7 @@ export default {
     }
   },
   mounted() {
-    setInterval(this.goNext, 4000)
+    // setInterval(this.goNext, 4000)
   },
   created() {
     this.changeSrc();
@@ -39,11 +43,10 @@ export default {
 
 <template>
   <div id="main-carousel">
-    <span @click="goPrev"><font-awesome-icon :icon="['fas', 'chevron-left']" class="fa-3x m-4" /></span>
-    <div v-for="(item, i) in anime" :key="item.title" class="card" :class="{ 'active': show(i) }">
-      <img :src="item.src" :alt="item.title">
-    </div>
-    <span @click="goNext"><font-awesome-icon :icon="['fas', 'chevron-right']" class="fa-3x m-4" /></span>
+    <ArrowLeft @click="goPrev" class="arrow left" />
+    <AnimeCard v-for="(item, i) in anime" :key="item.title" :item="item" :left="false" class="card"
+      :class="{ 'active': show(i) }" />
+    <ArrowRight @click="goNext" class="arrow right" />
   </div>
 </template>
 
@@ -52,19 +55,44 @@ export default {
 
 #main-carousel {
   height: 450px;
+  position: relative;
   background-color: $lightGray;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
+  gap: 10px;
+  margin: 0 20px;
 
   span {
     cursor: pointer;
+  }
+
+}
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  color: $primary;
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
+  }
+
+  &:hover {
+    background-color: $primary;
+    color: white;
   }
 }
 
 .card {
   display: none;
+  border: none;
 
   &.active {
     display: block;

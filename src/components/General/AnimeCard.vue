@@ -4,6 +4,7 @@ export default {
     item: Object,
     isOver: Boolean,
     left: Boolean,
+    icon: Boolean,
   },
   data() {
     return {
@@ -29,16 +30,19 @@ export default {
       <!-- Descriptions -->
       <figcaption :class="{ 'over-description': isOver, 'center': !left }">
         <p>
-          <span class="me-2">
+          <span class="me-2" v-if="icon">
             <font-awesome-icon icon="fa-solid fa-user" />
             {{ item.status }}
           </span>
-          <span>
+          <span v-if="icon">
             <font-awesome-icon icon="fa-solid fa-calendar-days" />
             {{ item.date }}
           </span>
         </p>
         <p>{{ item.title }}</p>
+        <span v-if="!icon" class="fw-normal">
+          {{ item.date }}
+        </span>
       </figcaption>
     </figure>
   </div>
@@ -47,6 +51,7 @@ export default {
 <style lang="scss" scoped>
 figure {
   position: relative;
+  font-weight: bold;
 }
 
 .genres {
@@ -67,14 +72,17 @@ figure {
   transform: translateX(-50%);
 }
 
-figcaption.over-description {
+figcaption {
   position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+figcaption.over-description {
   bottom: 10px;
   z-index: 1;
   color: white;
   font-weight: bold;
-  text-align: center;
-  width: 100%;
 }
 
 p {
@@ -84,6 +92,7 @@ p {
 img {
   height: 100%;
   width: 100%;
+  border-radius: 10px;
   filter: brightness(0.6);
 }
 </style>
