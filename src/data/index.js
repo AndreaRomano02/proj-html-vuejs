@@ -5,6 +5,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Fashion', 'Lifestyle'],
     time: '5:32',
+    status: 'demo',
   },
   {
     title: 'Place For A Road Trip',
@@ -12,6 +13,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Lifestyle', 'Stories', 'Travel'],
     time: '5:51',
+    status: 'demo',
   },
   {
     title: 'The Best Healthy Foods In 2022',
@@ -20,6 +22,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Food'],
     time: '5:42',
+    status: 'demo',
   },
   {
     title: 'Live ideas You Might Be Anime',
@@ -27,6 +30,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Culture', 'Stories'],
     time: '5:00',
+    status: 'demo',
   },
   {
     title: 'The Best Time To Have A Meal',
@@ -35,6 +39,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Food'],
     time: '5:11',
+    status: 'demo',
   },
   {
     title: 'Music The Love Of My Life',
@@ -42,6 +47,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Lifestyle', 'Lifestyle'],
     time: '5:50',
+    status: 'demo',
   },
   {
     title: "Beginner Photographer's Mistakes",
@@ -49,6 +55,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Fashion'],
     time: '5:15',
+    status: 'demo',
   },
   {
     title: 'Hygenic Receipe To Prepare Rice',
@@ -57,6 +64,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Food'],
     time: '5:22',
+    status: 'demo',
   },
   {
     title: 'The Best Success Stories',
@@ -64,6 +72,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Culture', 'Stories'],
     time: '5:42',
+    status: 'demo',
   },
   {
     title: 'Traveling Alone Is Awesome',
@@ -71,6 +80,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Stories', 'Travel'],
     time: '5:38',
+    status: 'demo',
   },
   {
     title: 'Reasons TO Visit France',
@@ -78,6 +88,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Lifestyle', 'Travel'],
     time: '5:37',
+    status: 'demo',
   },
   {
     title: 'The Best Winter Outfits',
@@ -86,6 +97,7 @@ export const anime = [
     date: 'December 26, 2022',
     genres: ['Fashion'],
     time: '5:34',
+    status: 'demo',
   },
 ];
 export const icons = ['facebook-f', 'twitter', 'instagram', 'youtube'];
