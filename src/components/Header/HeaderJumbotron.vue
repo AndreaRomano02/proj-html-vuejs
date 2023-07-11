@@ -1,12 +1,14 @@
 <script>
+import AppBanner from '../General/AppBanner.vue'
 export default {
+  components: { AppBanner }
 }
 </script>
 
 <template>
   <div class="jumbotron container">
     <img src="@/assets/img/anime-logo-300x89.webp" alt="Logo">
-    <img src="@/assets/img/header-banner.webp" alt="Banner">
+    <AppBanner bannerSrc="header-banner.webp" alt="Banner" />
   </div>
 </template>
 
