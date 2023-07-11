@@ -8,6 +8,9 @@ export default {
       currentIndex: 0,
     }
   },
+  mounted() {
+    setInterval(this.goNext, 4000)
+  },
   created() {
     this.changeSrc();
   },
@@ -36,11 +39,11 @@ export default {
 
 <template>
   <div id="main-carousel">
-    <span @click="goPrev">PREV</span>
+    <span @click="goPrev"><font-awesome-icon :icon="['fas', 'chevron-left']" class="fa-3x m-4" /></span>
     <div v-for="(item, i) in anime" class="card" :class="{ 'active': show(i) }">
       <img :src="item.src" :alt="item.title">
     </div>
-    <span @click="goNext">NEXT</span>
+    <span @click="goNext"><font-awesome-icon :icon="['fas', 'chevron-right']" class="fa-3x m-4" /></span>
   </div>
 </template>
 
@@ -53,6 +56,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
+
+  span {
+    cursor: pointer;
+  }
 }
 
 .card {
