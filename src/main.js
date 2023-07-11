@@ -10,7 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -41,6 +41,7 @@ library.add(
   faBookOpenReader,
   faSuitcase,
   faHouseChimney,
-  faCalendarDays
+  faCalendarDays,
+  faPlay
 );
 createApp(App).component('FontAwesomeIcon', FontAwesomeIcon).mount('#app');

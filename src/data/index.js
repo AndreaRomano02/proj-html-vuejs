@@ -132,3 +132,54 @@ export const headerMenuList = [
     icon: 'user',
   },
 ];
+
+export const videoList = [
+  {
+    imageSrc: 'default.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Overlord Season 4 - Official Trailer 3 | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+  {
+    imageSrc: 'hqdefault.webp',
+    videoSrc: 'https://www.youtube.com/embed/ebHd_3QJNBA',
+    title: 'Rent A Girlfriend Season 2 - Official Trailer | AniTv',
+    channel: 'AniTv',
+  },
+];

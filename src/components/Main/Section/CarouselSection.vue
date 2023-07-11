@@ -13,7 +13,7 @@ export default {
     }
   },
   mounted() {
-    // setInterval(this.goNext, 4000)
+    setInterval(this.goNext, 4000)
   },
   created() {
     this.changeSrc();

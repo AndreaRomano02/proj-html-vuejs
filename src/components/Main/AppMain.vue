@@ -1,16 +1,27 @@
 <script>
 import CarouselSection from './Section/CarouselSection.vue'
 import HeaderSection from './Section/HeaderSection.vue'
+import YoutubeSection from './Section/YoutubeSection.vue'
 import AnimeCard from '../General/AnimeCard.vue'
 import AppBanner from '../General/AppBanner.vue'
 import ArrowLeft from '../General/ArrowLeft.vue'
 import ArrowRight from '../General/ArrowRight.vue'
 import { anime } from '@/data'
+import { videoList } from '@/data'
 export default {
-  components: { CarouselSection, AnimeCard, HeaderSection, AppBanner, ArrowLeft, ArrowRight },
+  components: {
+    CarouselSection,
+    AnimeCard,
+    HeaderSection,
+    AppBanner,
+    ArrowLeft,
+    ArrowRight,
+    YoutubeSection
+  },
   data() {
     return {
-      anime
+      anime,
+      videoList
     }
   }
 }
@@ -92,6 +103,11 @@ export default {
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- YouTube Trailer -->
+    <section id="youtube">
+      <YoutubeSection :list="videoList" />
     </section>
   </main>
 </template>
