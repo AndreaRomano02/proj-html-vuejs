@@ -2,12 +2,14 @@
 import CarouselSection from './Section/CarouselSection.vue'
 import HeaderSection from './Section/HeaderSection.vue'
 import YoutubeSection from './Section/YoutubeSection.vue'
+import GenresSection from './Section/GenresSection.vue'
 import AnimeCard from '../General/AnimeCard.vue'
 import AppBanner from '../General/AppBanner.vue'
 import ArrowLeft from '../General/ArrowLeft.vue'
 import ArrowRight from '../General/ArrowRight.vue'
 import { anime } from '@/data'
 import { videoList } from '@/data'
+import { animeGenres } from '@/data'
 export default {
   components: {
     CarouselSection,
@@ -16,12 +18,14 @@ export default {
     AppBanner,
     ArrowLeft,
     ArrowRight,
-    YoutubeSection
+    YoutubeSection,
+    GenresSection,
   },
   data() {
     return {
       anime,
-      videoList
+      videoList,
+      animeGenres,
     }
   }
 }
@@ -108,6 +112,11 @@ export default {
     <!-- YouTube Trailer -->
     <section id="youtube">
       <YoutubeSection :list="videoList" />
+    </section>
+
+    <!-- Genres -->
+    <section id="genres">
+      <GenresSection :anime="anime" :genresArray="animeGenres" />
     </section>
   </main>
 </template>

@@ -100,6 +100,40 @@ export const anime = [
     status: 'demo',
   },
 ];
+
+export const animeGenres = [
+  {
+    genre: 'Fashion',
+    count: 0,
+    src: 'anime-fashion.webp',
+  },
+  {
+    genre: 'Culture',
+    count: 0,
+    src: 'success-story.webp',
+  },
+  {
+    genre: 'Food',
+    count: 0,
+    src: 'healthy-foods.webp',
+  },
+  {
+    genre: 'Lifestyle',
+    count: 0,
+    src: 'visit-france.webp',
+  },
+  {
+    genre: 'Stories',
+    count: 0,
+    src: 'travel-alone.webp',
+  },
+  {
+    genre: 'Travel',
+    count: 0,
+    src: 'best-places.webp',
+  },
+];
+
 export const icons = ['facebook-f', 'twitter', 'instagram', 'youtube'];
 
 export const headerMenuList = [
