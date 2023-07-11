@@ -48,7 +48,7 @@ export default {
           Lifestyle & Stories
         </HeaderSection>
 
-        <div class="row mt-5">
+        <div class="row mt-4">
           <div class="col-7">
             <AnimeCard :item="anime[8]" :left="true" :isOver="true" :singleGenre="true" :icon="true" />
           </div>
@@ -68,7 +68,7 @@ export default {
 @use '@/assets/scss/vars' as *;
 
 section {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 }
 
 #lifestyle-section {
