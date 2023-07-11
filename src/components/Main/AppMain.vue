@@ -65,7 +65,7 @@ export default {
 
     <!-- Banner -->
     <section id="banner">
-      <AppBanner class="banner" bannerSrc="page-banner-1.webp" />
+      <AppBanner class="container" bannerSrc="page-banner-1.webp" />
     </section>
   </main>
 </template>
@@ -94,9 +94,5 @@ section {
   text-align: center;
   padding: 3rem 0;
   background-color: $lightGray;
-
-  .banner {
-    width: 70%;
-  }
 }
 </style>
