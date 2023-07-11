@@ -45,7 +45,7 @@ export const anime = [
     title: 'Music The Love Of My Life',
     src: 'music-love.webp',
     date: 'December 26, 2022',
-    genres: ['Lifestyle', 'Lifestyle'],
+    genres: ['Lifestyle'],
     time: '5:50',
     status: 'demo',
   },
