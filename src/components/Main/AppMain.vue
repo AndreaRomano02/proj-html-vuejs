@@ -3,9 +3,11 @@ import CarouselSection from './Section/CarouselSection.vue'
 import HeaderSection from './Section/HeaderSection.vue'
 import AnimeCard from '../General/AnimeCard.vue'
 import AppBanner from '../General/AppBanner.vue'
+import ArrowLeft from '../General/ArrowLeft.vue'
+import ArrowRight from '../General/ArrowRight.vue'
 import { anime } from '@/data'
 export default {
-  components: { CarouselSection, AnimeCard, HeaderSection, AppBanner },
+  components: { CarouselSection, AnimeCard, HeaderSection, AppBanner, ArrowLeft, ArrowRight },
   data() {
     return {
       anime
@@ -67,6 +69,30 @@ export default {
     <section id="banner">
       <AppBanner class="container" bannerSrc="page-banner-1.webp" />
     </section>
+
+    <!-- Featured Post -->
+    <section id="posts">
+      <div class="container">
+        <HeaderSection>
+          <template v-slot:title>Featured post</template>
+          <template v-slot:right>
+            <ArrowLeft />
+            <ArrowRight />
+          </template>
+        </HeaderSection>
+        <div class="row mt-3">
+          <div class="col anime-post" v-for="item in anime.slice(0, 3)">
+            <AnimeCard :item="item" />
+            <div class="description-card">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum optio
+                utconsequatur provident debitis...</p>
+              <button class="btn">Read More</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -77,6 +103,7 @@ section {
   margin: 2.5rem 0;
 }
 
+// ---------------------------------------
 #lifestyle-section {
   .col-5>div:first-child div {
     border: none;
@@ -90,9 +117,39 @@ section {
   }
 }
 
+// ---------------------------------------
+
+// ---------------------------------------
 #banner {
   text-align: center;
   padding: 3rem 0;
   background-color: $lightGray;
 }
+
+// ---------------------------------------
+
+// ---------------------------------------
+#posts {
+
+  .description-card {
+    background-color: $lightGray;
+    padding-top: 70px;
+    text-align: center;
+
+    button {
+      background-color: $primary;
+      color: white;
+      font-weight: bold;
+      border-radius: 15px;
+      width: 40%;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+  }
+
+}
+
+// ---------------------------------------
 </style>

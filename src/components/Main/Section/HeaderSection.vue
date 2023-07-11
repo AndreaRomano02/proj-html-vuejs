@@ -9,12 +9,15 @@ export default {
 <template>
   <header>
     <h3>
-      <slot></slot>
+      <slot name="title"></slot>
     </h3>
-    <div class="right-header d-flex gap-3">
+    <div v-if="items" class="right-header d-flex gap-3">
       <div v-for="(item, i) in items" :key="i">
         {{ item }}
       </div>
+    </div>
+    <div v-else>
+      <slot name="right"></slot>
     </div>
   </header>
 </template>
