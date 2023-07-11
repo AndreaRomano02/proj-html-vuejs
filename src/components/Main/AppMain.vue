@@ -2,9 +2,10 @@
 import CarouselSection from './Section/CarouselSection.vue'
 import HeaderSection from './Section/HeaderSection.vue'
 import AnimeCard from '../General/AnimeCard.vue'
+import AppBanner from '../General/AppBanner.vue'
 import { anime } from '@/data'
 export default {
-  components: { CarouselSection, AnimeCard, HeaderSection },
+  components: { CarouselSection, AnimeCard, HeaderSection, AppBanner },
   data() {
     return {
       anime
@@ -61,6 +62,11 @@ export default {
         </div>
       </div>
     </section>
+
+    <!-- Banner -->
+    <section id="banner">
+      <AppBanner class="banner" bannerSrc="page-banner-1.webp" />
+    </section>
   </main>
 </template>
 
@@ -81,6 +87,16 @@ section {
     padding: 1rem 0;
     border-top: 1px solid black;
 
+  }
+}
+
+#banner {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: $lightGray;
+
+  .banner {
+    width: 70%;
   }
 }
 </style>

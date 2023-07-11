@@ -16,4 +16,8 @@ export default {
   <img :src="src" alt="Banner">
 </template>
 
-<style></style>
+<style>
+img {
+  border-radius: 10px;
+}
+</style>
