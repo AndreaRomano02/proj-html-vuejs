@@ -100,27 +100,12 @@ export default {
       text-transform: uppercase;
       font-weight: bold;
     }
+
+    .carousel-controls {
+      display: flex;
+    }
   }
 
-  .carousel-controls {
-    display: flex;
-
-    // button {
-    //   border: none;
-    //   background-color: transparent;
-    //   padding: 0;
-    //   text-align: center;
-    //   width: 40px;
-    //   height: 40px;
-    //   line-height: 40px;
-    //   border-radius: 50%;
-
-    //   &:hover {
-    //     background-color: $secondary;
-    //   }
-    // }
-
-  }
 }
 
 .icons {
