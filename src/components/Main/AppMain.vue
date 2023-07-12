@@ -97,13 +97,6 @@ export default {
     <!-- Featured Post -->
     <section id="posts">
       <div class="container">
-        <HeaderSection class="header">
-          <template v-slot:title>Featured post</template>
-          <template v-slot:right>
-            <button><font-awesome-icon :icon="['fas', 'chevron-left']" /></button>
-            <button><font-awesome-icon :icon="['fas', 'chevron-right']" /></button>
-          </template>
-        </HeaderSection>
         <CarouselSection :anime="anime" :other-style="true" />
       </div>
     </section>
@@ -153,51 +146,6 @@ section {
   text-align: center;
   padding: 3rem 0;
   background-color: $lightGray;
-}
-
-// ---------------------------------------
-
-// ---------------------------------------
-#posts {
-
-  .header {
-    button {
-      border: none;
-      background-color: $secondary;
-      color: white;
-      font-weight: bolder;
-      padding: 0;
-      text-align: center;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 50%;
-      margin-left: 10px;
-
-      &:hover {
-        background-color: $primary;
-      }
-    }
-  }
-
-  .description-card {
-    background-color: $lightGray;
-    padding-top: 70px;
-    text-align: center;
-
-    button {
-      background-color: $primary;
-      color: white;
-      font-weight: bold;
-      border-radius: 15px;
-      width: 40%;
-
-      &:hover {
-        background-color: $secondary;
-      }
-    }
-  }
-
 }
 
 // ---------------------------------------

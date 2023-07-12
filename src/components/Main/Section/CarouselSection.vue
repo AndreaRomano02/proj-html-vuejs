@@ -2,8 +2,9 @@
 import AnimeCard from '@/components/general/AnimeCard.vue'
 import ArrowLeft from '@/components/General/ArrowLeft.vue';
 import ArrowRight from '@/components/General/ArrowRight.vue';
+import HeaderSection from './HeaderSection.vue'
 export default {
-  components: { AnimeCard, ArrowLeft, ArrowRight },
+  components: { AnimeCard, ArrowLeft, ArrowRight, HeaderSection },
   props: {
     anime: Array,
     otherStyle: Boolean,
@@ -51,6 +52,16 @@ export default {
   </div>
 
   <div v-if="otherStyle" id="second-carousel" class="row mt-3">
+    <HeaderSection class="header">
+      <template v-slot:title>Featured post</template>
+      <template v-slot:right>
+        <button @click="goPrev" @mouseenter="stopInterval" @mouseleave="startInterval"><font-awesome-icon
+            :icon="['fas', 'chevron-left']" /></button>
+        <button @click="goNext" @mouseenter="stopInterval" @mouseleave="startInterval"><font-awesome-icon
+            :icon="['fas', 'chevron-right']" /></button>
+      </template>
+    </HeaderSection>
+
     <div class="col anime-post card" v-for="(item, i) in anime" :class="{ active: secondShow(i) }">
       <AnimeCard :item="item" @mouseenter="stopInterval" @mouseleave="startInterval" />
       <div class="description-card">
@@ -102,6 +113,30 @@ export default {
 }
 
 #second-carousel {
+
+  .header {
+
+    margin-bottom: 20px;
+
+    button {
+      border: none;
+      background-color: $secondary;
+      color: white;
+      font-weight: bolder;
+      padding: 0;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      margin-left: 10px;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+
   .description-card {
     background-color: $lightGray;
     padding-top: 70px;
