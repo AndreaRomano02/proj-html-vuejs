@@ -1,5 +1,14 @@
 <script>
+import FooterContent from './FooterContent.vue';
+import { footerMenuList } from '@/data'
+
 export default {
+  components: { FooterContent },
+  data() {
+    return {
+      footerMenuList,
+    }
+  }
 }
 </script>
 
@@ -7,6 +16,9 @@ export default {
   <footer>
     <div class="bg-line">
       <span><font-awesome-icon :icon="['fas', 'caret-down']" class="fa-3x" /></span>
+    </div>
+    <div class="container">
+      <FooterContent :list="footerMenuList" />
     </div>
   </footer>
 </template>
@@ -31,6 +43,6 @@ export default {
 
 footer {
   background-color: $primary;
-  min-height: 500px;
+  color: white;
 }
 </style>

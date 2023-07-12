@@ -217,3 +217,31 @@ export const videoList = [
     channel: 'AniTv',
   },
 ];
+
+export const footerMenuList = [
+  {
+    title: 'Get Started',
+    links: ['Resources', 'Tutorials', 'Examples', 'Docs'],
+    input: false,
+  },
+  {
+    title: 'About',
+    links: ['Stories', 'Community', 'Blog', 'Brand Assets'],
+    input: false,
+  },
+  {
+    title: 'Features',
+    links: ['Overview', 'Design', 'Code', 'Collaborate'],
+    input: false,
+  },
+  {
+    title: 'Quick Links',
+    links: ['Stories', 'Community', 'Blog', 'Brand Assets'],
+    input: false,
+  },
+  {
+    title: 'Subscribe To Newsletter',
+    links: [],
+    input: true,
+  },
+];
