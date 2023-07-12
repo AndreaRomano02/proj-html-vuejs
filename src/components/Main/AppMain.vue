@@ -63,7 +63,7 @@ export default {
       <div class="container">
         <!-- Header of Section -->
         <HeaderSection :items="['All', 'lifestyle', 'stories']">
-          Lifestyle & Stories
+          <template v-slot:title>Lifestyle & Stories</template>
         </HeaderSection>
 
         <div class="row mt-4">
@@ -130,6 +130,12 @@ section {
 
 // ---------------------------------------
 #lifestyle-section {
+
+  [class^="col"]>div:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
   .col-5>div:first-child div {
     border: none;
     padding-top: 0;
@@ -138,7 +144,6 @@ section {
   .anime-card {
     padding: 1rem 0;
     border-top: 1px solid black;
-
   }
 }
 
