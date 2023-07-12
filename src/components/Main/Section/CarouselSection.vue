@@ -44,6 +44,7 @@ export default {
 </script>
 
 <template>
+  <!-- First Style Of Carousel -->
   <div v-if="!otherStyle" id="main-carousel">
     <ArrowLeft @click="goPrev" class="arrow left" @mouseenter="stopInterval" @mouseleave="startInterval" />
     <AnimeCard v-for="(item, i) in anime" :key="item.title" :item="item" :left="false" class="card"
@@ -51,7 +52,9 @@ export default {
     <ArrowRight @click="goNext" class="arrow right" @mouseenter="stopInterval" @mouseleave="startInterval" />
   </div>
 
+  <!-- Second Style Of Carousel -->
   <div v-if="otherStyle" id="second-carousel" class="row mt-3">
+    <!-- Header -->
     <HeaderSection class="header">
       <template v-slot:title>Featured post</template>
       <template v-slot:right>
@@ -62,6 +65,7 @@ export default {
       </template>
     </HeaderSection>
 
+    <!-- Main Content -->
     <div class="col anime-post card" v-for="(item, i) in anime" :class="{ active: secondShow(i) }">
       <AnimeCard :item="item" @mouseenter="stopInterval" @mouseleave="startInterval" />
       <div class="description-card">
@@ -76,6 +80,7 @@ export default {
 <style lang="scss" scoped>
 @use '@/assets/scss/vars' as *;
 
+// First style of carousel
 #main-carousel {
   height: 450px;
   position: relative;
@@ -112,6 +117,7 @@ export default {
   }
 }
 
+// Second style of carousel
 #second-carousel {
 
   .header {
@@ -156,6 +162,7 @@ export default {
   }
 }
 
+// Generals
 .card {
   display: none;
   border: none;

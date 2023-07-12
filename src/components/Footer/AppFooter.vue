@@ -14,9 +14,12 @@ export default {
 
 <template>
   <footer>
+    <!-- TOP Background Line  -->
     <div class="bg-line">
       <span><font-awesome-icon :icon="['fas', 'caret-down']" class="fa-3x" /></span>
     </div>
+
+    <!-- Content -->
     <div class="container">
       <FooterContent :list="footerMenuList" />
     </div>

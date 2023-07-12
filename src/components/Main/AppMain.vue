@@ -1,4 +1,5 @@
 <script>
+// Import all
 import CarouselSection from './Section/CarouselSection.vue'
 import HeaderSection from './Section/HeaderSection.vue'
 import YoutubeSection from './Section/YoutubeSection.vue'
@@ -10,7 +11,10 @@ import ArrowRight from '../General/ArrowRight.vue'
 import { anime } from '@/data'
 import { videoList } from '@/data'
 import { animeGenres } from '@/data'
-import { faListSquares } from '@fortawesome/free-solid-svg-icons'
+
+
+// ----------------------------------------------------------------------------
+// Logic
 export default {
   components: {
     CarouselSection,

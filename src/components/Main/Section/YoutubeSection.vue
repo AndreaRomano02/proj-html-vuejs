@@ -12,9 +12,11 @@ export default {
   <div class="youtube container">
     <div class="row h-100">
       <div class="col-8 left p-0">
+        <!-- Main Video -->
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/U6wS1wOCcBk"></iframe>
       </div>
       <div class="col-4 p-0 right">
+        <!-- Preview Header -->
         <header>
           <div>
             <font-awesome-icon icon="fa-solid fa-play" class="fa-2x ms-4" />
@@ -24,6 +26,8 @@ export default {
             <p class="fa-xs">1/ {{ list.length }}</p>
           </div>
         </header>
+
+        <!-- Videos Preview -->
         <div v-for="(item, i) in list" :key="i">
           <YoutubePreview :item="item" :index="i" />
         </div>
