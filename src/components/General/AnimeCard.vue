@@ -54,6 +54,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/vars' as *;
+
 // General CSS of fiure
 figure {
   position: relative;
@@ -76,6 +78,10 @@ figure {
   z-index: 1;
   top: 20px;
   left: 20px;
+
+  & span:hover {
+    color: $primary;
+  }
 
   span {
     background-color: white;
