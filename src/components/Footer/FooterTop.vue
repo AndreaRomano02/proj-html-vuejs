@@ -15,9 +15,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
-@use '@/assets/scss/vars' as *;
-
+<style scoped>
 div {
   display: flex;
   justify-content: space-between;

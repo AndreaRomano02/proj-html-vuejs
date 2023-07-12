@@ -1,8 +1,9 @@
 <script>
 import FooterTop from './FooterTop.vue';
+import FooterBottom from './FooterBottom.vue';
 
 export default {
-  components: { FooterTop },
+  components: { FooterTop, FooterBottom },
   props: {
     list: Array,
   }
@@ -11,8 +12,7 @@ export default {
 
 <template>
   <FooterTop :list="list" />
+  <FooterBottom />
 </template>
 
-<style lang="scss" scoped>
-@use '@/assets/scss/vars' as *;
-</style>
+<style scoped></style>
