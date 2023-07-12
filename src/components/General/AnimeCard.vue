@@ -56,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 @use '@/assets/scss/vars' as *;
 
-// General CSS of fiure
+// General CSS of figure
 figure {
   position: relative;
   font-weight: bold;
@@ -106,7 +106,6 @@ figure {
 // General CSS of desctiption
 figcaption {
   position: absolute;
-  text-align: center;
   left: 20px;
   margin-top: 10px;
 
@@ -123,7 +122,7 @@ figcaption {
   &.aside-text {
     position: static;
     width: 100%;
-
+    margin-left: 20px;
   }
 }
 
