@@ -10,6 +10,7 @@ import ArrowRight from '../General/ArrowRight.vue'
 import { anime } from '@/data'
 import { videoList } from '@/data'
 import { animeGenres } from '@/data'
+import { faListSquares } from '@fortawesome/free-solid-svg-icons'
 export default {
   components: {
     CarouselSection,
@@ -27,7 +28,15 @@ export default {
       videoList,
       animeGenres,
     }
-  }
+  },
+  created() {
+
+    this.anime.map(element => {
+      const url = new URL(`../../assets/img/${element.src}`, import.meta.url);
+      element.src = url.href
+      return element
+    })
+  },
 }
 </script>
 
@@ -88,24 +97,14 @@ export default {
     <!-- Featured Post -->
     <section id="posts">
       <div class="container">
-        <HeaderSection>
+        <HeaderSection class="header">
           <template v-slot:title>Featured post</template>
           <template v-slot:right>
-            <ArrowLeft />
-            <ArrowRight />
+            <button><font-awesome-icon :icon="['fas', 'chevron-left']" /></button>
+            <button><font-awesome-icon :icon="['fas', 'chevron-right']" /></button>
           </template>
         </HeaderSection>
-        <div class="row mt-3">
-          <div class="col anime-post" v-for="item in anime.slice(0, 3)">
-            <AnimeCard :item="item" />
-            <div class="description-card">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum optio
-                utconsequatur provident debitis...</p>
-              <button class="btn">Read More</button>
-            </div>
-
-          </div>
-        </div>
+        <CarouselSection :anime="anime" :other-style="true" />
       </div>
     </section>
 
@@ -160,6 +159,26 @@ section {
 
 // ---------------------------------------
 #posts {
+
+  .header {
+    button {
+      border: none;
+      background-color: $secondary;
+      color: white;
+      font-weight: bolder;
+      padding: 0;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      margin-left: 10px;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
 
   .description-card {
     background-color: $lightGray;

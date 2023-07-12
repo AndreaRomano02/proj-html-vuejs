@@ -6,26 +6,18 @@ export default {
   components: { AnimeCard, ArrowLeft, ArrowRight },
   props: {
     anime: Array,
+    otherStyle: Boolean,
   },
   data() {
     return {
       currentIndex: 0,
+      autoPlay: null,
     }
   },
   mounted() {
-    setInterval(this.goNext, 4000)
-  },
-  created() {
-    this.changeSrc();
+    this.startInterval()
   },
   methods: {
-    changeSrc() {
-      return this.anime.map(element => {
-        const url = new URL(`../../../assets/img/${element.src}`, import.meta.url);
-        element.src = url.href
-        return element
-      })
-    },
     goNext() {
       if (this.currentIndex == this.anime.length - 4) this.currentIndex = 0
       else this.currentIndex++
@@ -36,17 +28,37 @@ export default {
     },
     show(i) {
       return this.currentIndex == i || this.currentIndex + 1 == i || this.currentIndex + 2 == i || this.currentIndex + 3 == i
-    }
+    },
+    secondShow(i) {
+      return this.currentIndex == i || this.currentIndex + 1 == i || this.currentIndex + 2 == i
+    },
+    startInterval() {
+      this.autoPlay = setInterval(this.goNext, 4000)
+    },
+    stopInterval() {
+      clearInterval(this.autoPlay)
+    },
   },
 }
 </script>
 
 <template>
-  <div id="main-carousel">
+  <div v-if="!otherStyle" id="main-carousel">
     <ArrowLeft @click="goPrev" class="arrow left" />
     <AnimeCard v-for="(item, i) in anime" :key="item.title" :item="item" :left="false" class="card"
-      :class="{ 'active': show(i) }" />
+      @mouseenter="stopInterval" @mouseleave="startInterval" :class="{ 'active': show(i) }" />
     <ArrowRight @click="goNext" class="arrow right" />
+  </div>
+
+  <div v-if="otherStyle" id="second-carousel" class="row mt-3">
+    <div class="col anime-post card" v-for="(item, i) in anime" :class="{ active: secondShow(i) }">
+      <AnimeCard :item="item" @mouseenter="stopInterval" @mouseleave="startInterval" />
+      <div class="description-card">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum optio
+          utconsequatur provident debitis...</p>
+        <button class="btn">Read More</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,25 +80,44 @@ export default {
     cursor: pointer;
   }
 
+  .arrow {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    color: $primary;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: white;
+    }
+  }
 }
 
-.arrow {
-  position: absolute;
-  z-index: 2;
-  background-color: white;
-  color: $primary;
+#second-carousel {
+  .description-card {
+    background-color: $lightGray;
+    padding-top: 70px;
+    text-align: center;
 
-  &.left {
-    left: 10px;
-  }
+    button {
+      background-color: $primary;
+      color: white;
+      font-weight: bold;
+      border-radius: 15px;
+      width: 40%;
 
-  &.right {
-    right: 10px;
-  }
-
-  &:hover {
-    background-color: $primary;
-    color: white;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
   }
 }
 
