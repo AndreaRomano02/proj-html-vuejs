@@ -32,4 +32,9 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+li:hover {
+  color: $secondary;
+  cursor: pointer;
+}
 </style>
