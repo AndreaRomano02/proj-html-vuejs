@@ -45,10 +45,10 @@ export default {
 
 <template>
   <div v-if="!otherStyle" id="main-carousel">
-    <ArrowLeft @click="goPrev" class="arrow left" />
+    <ArrowLeft @click="goPrev" class="arrow left" @mouseenter="stopInterval" @mouseleave="startInterval" />
     <AnimeCard v-for="(item, i) in anime" :key="item.title" :item="item" :left="false" class="card"
       @mouseenter="stopInterval" @mouseleave="startInterval" :class="{ 'active': show(i) }" />
-    <ArrowRight @click="goNext" class="arrow right" />
+    <ArrowRight @click="goNext" class="arrow right" @mouseenter="stopInterval" @mouseleave="startInterval" />
   </div>
 
   <div v-if="otherStyle" id="second-carousel" class="row mt-3">
